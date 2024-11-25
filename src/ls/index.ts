@@ -1,9 +1,13 @@
 export const enum LSKeys {
   ShowThx = "ab_show_thx_dzhin_2",
+  Step = "ab_show_step_dzhin_2",
+  Wishes = "ab_show_wishes_dzhin_2",
 }
 
 export interface LSData {
   [LSKeys.ShowThx]: boolean | null;
+  [LSKeys.Step]: boolean | null;
+  [LSKeys.Wishes]: { wish: string; amount: string }[] | null;
 }
 
 const getItem = <K extends LSKeys>(
